@@ -708,14 +708,14 @@ export default {
     },
     totalRowCount() {
       const total = this.processedRows.reduce((total, headerRow) => {
-        const childrenCount = headerRow.children ? headerRow.children.length : 0;
+        const childrenCount = headerRow.children ? headerRow.children.length : 1;
         return total + childrenCount;
       }, 0);
       return total;
     },
     totalPageRowCount() {
       const total = this.paginated.reduce((total, headerRow) => {
-        const childrenCount = headerRow.children ? headerRow.children.length : 0;
+        const childrenCount = headerRow.children ? headerRow.children.length : 1;
         return total + childrenCount;
       }, 0);
       return total;
