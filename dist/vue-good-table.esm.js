@@ -8847,14 +8847,14 @@ var script$6 = {
     },
     totalRowCount: function totalRowCount() {
       var total = this.processedRows.reduce(function (total, headerRow) {
-        var childrenCount = headerRow.children ? headerRow.children.length : 0;
+        var childrenCount = headerRow.children ? headerRow.children.length+1 : 1;
         return total + childrenCount;
       }, 0);
       return total;
     },
     totalPageRowCount: function totalPageRowCount() {
       var total = this.paginated.reduce(function (total, headerRow) {
-        var childrenCount = headerRow.children ? headerRow.children.length : 0;
+        var childrenCount = headerRow.children ? headerRow.children.length : 1;
         return total + childrenCount;
       }, 0);
       return total;
